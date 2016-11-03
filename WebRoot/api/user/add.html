@@ -1,0 +1,25 @@
+<#include "/common/_layout.html" />
+<@layout>
+<h1>User管理 ---&gt; 创建User
+</h1>
+<div class="form_box">
+	<form action="/api/user/save" method="post">
+		<fieldset class="solid">
+			<legend>创建User</legend>
+			<input type="hidden" name="user.userID" value="${setID.produceUserID()}" />
+			<div>
+				<label>昵称</label>
+				<input type="text" name="user.name" value="${(user.name)!}" />${nameMsg!}
+			</div>
+			<div>
+				<label>密码</label>
+				<input type="text" name="user.password" value="${(user.password)!}" />${passwordMsg!}
+			</div>
+			<div>
+				<label>&nbsp;</label>
+				<input value="提交" type="submit">
+			</div>
+		</fieldset>
+	</form>
+</div>
+</@layout>

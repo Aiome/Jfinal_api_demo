@@ -1,0 +1,51 @@
+<#include "/common/_layout.html" />
+<@layout>
+<h1>Item管理 ---&gt; 创建Item
+</h1>
+<div class="form_box">
+	<form action="/api/item/save" method="post">
+		<fieldset class="solid">
+			<legend>创建Item</legend>
+			<input type="hidden" name="item.itemID" value="${(setItemID.produceItemID())}" />
+			<input type="hidden" name="item.commonID" value="${(setItemID.produceItemID())}" />
+			<input type="hidden" name="item.detailID" value="${(setItemID.produceItemID())}" />
+			<div>
+				<label>商品标题</label>
+				<input type="text" name="item.title" value="${(Item.title)!}" />
+			</div>
+			<div>
+				<label>缩略图</label>
+				<input type="text" name="item.pic" value="${(Item.pic)!}" />
+			</div>
+			<div>
+				<label>价格</label>
+				<input type="text" name="item.price" value="${(Item.price)!}" />
+			</div>
+			<div>
+				<label>快递费用</label>
+				<input type="text" name="item.expressPrice" value="${(Item.expressPrice)!}" />
+			</div>
+			<div>
+				<label>品牌</label>
+				<input type="text" name="item.brand" value="${(Item.brand)!}" />
+			</div>
+			<div>
+				<label>产地</label>
+				<input type="text" name="item.origin" value="${(Item.origin)!}" />
+			</div>
+			<div>
+				<label>材质</label>
+				<input type="text" name="item.meterial" value="${(Item.meterial)!}" />
+			</div>
+			<div>
+				<label>生产年份</label>
+				<input type="text" name="item.year" value="${(Item.year)!}" />
+			</div>
+			<div>
+				<label>&nbsp;</label>
+				<input value="提交" type="submit">
+			</div>
+		</fieldset>
+	</form>
+</div>
+</@layout>

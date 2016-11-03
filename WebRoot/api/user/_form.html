@@ -1,0 +1,16 @@
+<fieldset class="solid">
+	<legend>创建User</legend>
+	<input type="hidden" name="user.userID" value="${user.userID}" />
+	<div>
+		<label>昵称</label>
+		<input type="text" name="user.name" value="${(user.name)!}" />${nameMsg!}
+	</div>
+	<div>
+		<label>密码</label>
+		<input type="text" name="user.password" value="${(user.password)!}" />${passwordMsg!}
+	</div>
+	<div>
+		<label>&nbsp;</label>
+		<input value="提交" type="submit">
+	</div>
+</fieldset>

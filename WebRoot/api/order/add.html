@@ -1,0 +1,25 @@
+<#include "/common/_layout.html" />
+<@layout>
+<h1>Order管理 ---&gt; OrderUser
+</h1>
+<div class="form_box">
+	<form action="/api/order/save" method="post">
+		<fieldset class="solid">
+			<legend>创建Order</legend>
+			<input type="hidden" name="Order.orderID" value="${setID.orderID()}" />
+			<div>
+				<label>用户ID</label>
+				<input type="text" name="Order.userID" value="${(Order.userID)!}" />${nameMsg!}
+			</div>
+			<div>
+				<label>订单详情ID</label>
+				<input type="text" name="Order.itemDetailID" value="${(Order.itemDetailID)!}" />${passwordMsg!}
+			</div>
+			<div>
+				<label>&nbsp;</label>
+				<input value="提交" type="submit">
+			</div>
+		</fieldset>
+	</form>
+</div>
+</@layout>

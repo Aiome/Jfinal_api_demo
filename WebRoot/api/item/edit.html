@@ -1,0 +1,49 @@
+<#include "/common/_layout.html" />
+<@layout>
+<h1>Item管理 ---&gt; 修改Item
+</h1>
+<div class="form_box">
+	<form action="/api/item/update" method="post">
+		<fieldset class="solid">
+			<legend>修改Item</legend>
+			<input type="hidden" name="item.itemID" value="${item.itemID}" />
+			<div>
+				<label>商品标题</label>
+				<input type="text" name="item.title" value="${(item.title)!}" />
+			</div>
+			<div>
+				<label>缩略图</label>
+				<input type="text" name="item.pic" value="${(item.pic)!}" />
+			</div>
+			<div>
+				<label>价格</label>
+				<input type="text" name="item.price" value="${(item.price)!}" />
+			</div>
+			<div>
+				<label>快递费用</label>
+				<input type="text" name="item.expressPrice" value="${(item.expressPrice)!}" />
+			</div>
+			<div>
+				<label>品牌</label>
+				<input type="text" name="item.brand" value="${(item.brand)!}" />
+			</div>
+			<div>
+				<label>产地</label>
+				<input type="text" name="item.origin" value="${(item.origin)!}" />
+			</div>
+			<div>
+				<label>材质</label>
+				<input type="text" name="item.meterial" value="${(item.meterial)!}" />
+			</div>
+			<div>
+				<label>生产年份</label>
+				<input type="text" name="item.year" value="${(item.year)!}" />
+			</div>
+			<div>
+				<label>&nbsp;</label>
+				<input value="提交" type="submit">
+			</div>
+		</fieldset>
+	</form>
+</div>
+</@layout>
